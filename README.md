@@ -1,5 +1,130 @@
 # Unity2D_Playground
 
+# Unity2D Playground 🎮
+
+**Unity2D Playground** és un repositori dedicat a la pràctica i aprenentatge del desenvolupament de videojocs amb Unity en 2D. Conté múltiples subprojectes independents, estructurats per ordre numèric segons la seva complexitat o ordre d'aprenentatge recomanat.
+
+Cada subprojecte està ubicat en una carpeta pròpia, fent més senzilla la navegació i l'aprenentatge progressiu.
+
+---
+
+## 📁 Estructura del Repositori
+
+L'estructura general del repositori és aquesta:
+
+```
+Unity2D_Playground/
+├── 01-HelloWorld/
+├── 02-PlayerMovement/
+├── 03-EnemyAI/
+├── .gitignore
+└── README.md
+```
+
+Cada carpeta numerada conté un subprojecte de Unity completament independent.
+
+---
+
+## 🚀 Com treballar amb aquest repositori
+
+Pots utilitzar aquest repositori de diferents maneres segons les teves necessitats:
+
+### 1. Descarregar el repositori complet
+
+Si no tens problemes d'espai i vols tenir-ho tot disponible, fes un clone complet:
+
+```bash
+git clone https://github.com/polprats/Unity2D_Playground.git
+cd Unity2D_Playground
+```
+
+### 2. Descarregar només un subprojecte específic (Sparse Checkout)
+
+Si només vols treballar amb un sol subprojecte, utilitza aquesta opció per descarregar exclusivament el contingut que necessites. Per exemple, descarregarem només el projecte `01-HelloWorld`:
+
+```bash
+git clone --filter=blob:none --no-checkout https://github.com/polprats/Unity2D_Playground.git
+cd Unity2D_Playground
+
+git sparse-checkout init --cone
+git sparse-checkout set 01-HelloWorld .gitignore README.md
+git checkout main
+```
+
+Això descarregarà únicament el subprojecte específic indicat (`01-HelloWorld`) i els fitxers essencials (`.gitignore`, `README.md`).
+
+**Per afegir més subprojectes més tard:**
+
+```bash
+git sparse-checkout add 02-PlayerMovement
+```
+
+### 3. Començar un nou subprojecte
+
+Per crear un nou subprojecte:
+
+- Crea una nova carpeta seguint la seqüència numèrica existent (`04-MyNewProject`).
+- Desenvolupa-hi el projecte directament amb Unity.
+- Els fitxers generats automàticament i no necessaris per compartir seran ignorats gràcies al `.gitignore` global.
+
+---
+
+## ⚙️ Com treballar habitualment amb Git
+
+### Veure l'estat actual dels canvis
+
+```bash
+git status
+```
+
+### Afegir fitxers per fer commit
+
+- **Afegir tots els fitxers modificats:**
+```bash
+git add .
+```
+
+- **Afegir només fitxers específics:**
+```bash
+git add nom_del_fitxer
+```
+
+### Fer un commit
+
+```bash
+git commit -m "Missatge descriptiu dels canvis fets"
+```
+
+### Pujar els canvis al repositori remot (GitHub)
+
+```bash
+git push origin main
+```
+
+---
+
+## 🔧 Com està fet el `.gitignore` global
+
+Aquest repositori conté un sol fitxer `.gitignore` a l'arrel que gestiona tots els subprojectes, basat en el `.gitignore` oficial recomanat per Unity:
+
+- [Unity.gitignore oficial](https://github.com/github/gitignore/blob/main/Unity.gitignore)
+
+### Què ignora aquest fitxer?
+
+- Carpetes de Unity que no calen versionar (ex: `Library/`, `Temp/`, `Obj/`, `Build/`, `Logs/`)
+- Fitxers temporals generats per IDEs (Visual Studio, Rider, VS Code)
+- Fitxers específics de sistema (ex: `.DS_Store`, `Thumbs.db`)
+
+Gràcies als patrons utilitzats (`**/`), aquest `.gitignore` aplica automàticament a qualsevol subprojecte.
+
+---
+
+## ✅ Bones pràctiques
+
+- Realitza **commits freqüents i clars**.
+- Treballa amb **branques sep
+
+
 
 Modificar el .gitignore per a que només tingui el .gitignore i el README.md.
 
